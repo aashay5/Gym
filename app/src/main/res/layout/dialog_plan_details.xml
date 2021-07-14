@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:background="#F8F8F8">
+
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold|italic"
+        android:textSize="18dp"
+        android:text="Training Name"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/txtHowLong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtName"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:text="Minutes of work-out"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/edtTxtMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtHowLong"
+        android:layout_centerHorizontal="true"
+        android:hint="minutes"
+        android:inputType="number"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/txtSelectDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtTxtMinutes"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:text="Select the day"
+        android:textColor="@color/black" />
+
+    <Spinner
+        android:id="@+id/spinnerDays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtSelectDay"
+        android:layout_centerHorizontal="true"
+        android:alwaysDrawnWithCache="false"
+        android:entries="@array/days" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerDays"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp">
+
+        <Button
+            android:id="@+id/btnDismiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_back"
+            android:text="Dismiss"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/btnDismiss"
+            android:background="@drawable/button_back"
+            android:text="Add"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>
